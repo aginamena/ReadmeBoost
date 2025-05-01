@@ -1,12 +1,9 @@
 "use client";
 
-// import { Button } from "@/components/ui/button";
 import { Container, Button } from "@mui/material";
 import MDEditor, { commands, ICommand } from "@uiw/react-md-editor";
-// import { Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { getOptimizedReadme } from "./util";
-// import { getOpt } from "./util";
 
 export default function Optimze() {
   // console.log(data);

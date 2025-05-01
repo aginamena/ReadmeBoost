@@ -1,17 +1,5 @@
 import { app, togetherai } from "@/util/config";
-import {
-  Box,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Typography,
-} from "@mui/material";
 import { generateObject } from "ai";
-import Link from "next/link";
 import { string, z } from "zod";
 import TableCmp from "./TableCmp";
 

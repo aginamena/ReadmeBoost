@@ -1,5 +1,4 @@
 "use client";
-
 import {
   SignedIn,
   SignedOut,
@@ -12,13 +11,13 @@ import { Box } from "@mui/material";
 export default function Header() {
   return (
     <Box>
-      {/* <SignedOut>
+      <SignedOut>
         <SignInButton />
         <SignUpButton />
       </SignedOut>
       <SignedIn>
         <UserButton />
-      </SignedIn> */}
+      </SignedIn>
     </Box>
   );
 }
