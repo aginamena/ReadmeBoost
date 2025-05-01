@@ -19,7 +19,7 @@ export default function Optimze() {
         Push Changes
       </Button>
     ),
-    execute: async (state: TextState, api: TextAreaTextApi) => {
+    execute: () => {
       alert("This feature is not yet available. We're working on it!");
     },
   };
