@@ -17,6 +17,10 @@ export default function TableCmp({
   summarizedFiles,
   noReadmeFound,
   constructive_feedback,
+}: {
+  summarizedFiles: string[];
+  noReadmeFound: boolean;
+  constructive_feedback: { readme_phrase: string; feedback: string }[];
 }) {
   sessionStorage.setItem(
     "constructive_feedback",

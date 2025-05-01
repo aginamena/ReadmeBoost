@@ -18,7 +18,7 @@ export default async function Comparison({
   let readme = "";
 
   const octokit = await app.getInstallationOctokit(Number(installation_id));
-  let constructive_feedback = [];
+  let constructive_feedback: { readme_phrase: string; feedback: string }[] = [];
 
   try {
     const content = await octokit.request(`GET /repos/{owner}/{repo}/readme`, {
@@ -29,8 +29,12 @@ export default async function Comparison({
       },
     });
     readme = content.data;
-  } catch (error) {
-    errorMessage = error.message;
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      errorMessage = error.message;
+    } else {
+      console.error("An unknown error occurred");
+    }
   }
   //   console.log(`${process.env.TOGETHER_AI_MODEL}`);
   try {
@@ -66,13 +70,13 @@ export default async function Comparison({
         Don't include any markdown symbol in your constructive feedback.`,
     });
     constructive_feedback = object.constructive_feedback;
-  } catch (error) {
-    errorMessage = error.message;
+  } catch (error: unknown) {
+    if (error instanceof Error) errorMessage = error.message;
   }
   console.log(errorMessage);
   return (
     <TableCmp
-      noReadmeFound={errorMessage || readme.length <= 1}
+      noReadmeFound={errorMessage ? true : readme.length <= 1}
       constructive_feedback={constructive_feedback}
       summarizedFiles={summarizedFiles}
     />

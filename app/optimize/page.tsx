@@ -7,7 +7,7 @@ import { getOptimizedReadme } from "./util";
 
 export default function Optimze() {
   // console.log(data);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const pushChanges: ICommand = {
     name: "Push chanages",
@@ -23,16 +23,16 @@ export default function Optimze() {
       alert("This feature is not yet available. We're working on it!");
     },
   };
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState<string>("");
 
   useEffect(() => {
     setIsLoading(true);
     async function optimizeReadme() {
-      const constructive_feedback = JSON.parse(
-        sessionStorage.getItem("constructive_feedback")
+      const constructive_feedback: string = JSON.parse(
+        sessionStorage.getItem("constructive_feedback") || "" // Default to empty string if null
       );
-      const summarizedFiles = JSON.parse(
-        sessionStorage.getItem("summarizedFiles")
+      const summarizedFiles: string = JSON.parse(
+        sessionStorage.getItem("summarizedFiles") || "" // Default to empty string if null
       );
 
       const optimizedReadme = await getOptimizedReadme(
@@ -45,6 +45,7 @@ export default function Optimze() {
     }
     optimizeReadme();
   }, []);
+
   return (
     <Container>
       <MDEditor

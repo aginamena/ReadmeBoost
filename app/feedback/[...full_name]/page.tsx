@@ -11,6 +11,7 @@ export default async function Feedback({
   searchParams,
 }: {
   params: Promise<{ full_name: string[] }>;
+  searchParams: Promise<{ installation_id: string }>;
 }) {
   const { full_name } = await params;
   const { installation_id } = await searchParams;
@@ -62,7 +63,7 @@ export default async function Feedback({
       }
     );
     const filteredFilesAndFolders = treeStructure.data.tree.filter(
-      (file) => !shouldIgnoreFileOrFolder(file.path)
+      (file: { path: string }) => !shouldIgnoreFileOrFolder(file.path)
     );
 
     for (const file of filteredFilesAndFolders) {

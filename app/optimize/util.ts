@@ -1,8 +1,8 @@
 import { togetherai } from "@/util/config";
 import { generateText } from "ai";
 
-export async function getOptimizedReadme( constructive_feedback,
-    summarizedFiles){
+export async function getOptimizedReadme( constructive_feedback : object[],
+    summarizedFiles:string[]){
         console.log(constructive_feedback);
         console.log(summarizedFiles);
           const { text } = await generateText({

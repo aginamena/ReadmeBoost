@@ -3,7 +3,11 @@ import { Box, Container, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Repo from "./Repo";
 
-export default async function Repositories({ searchParams }) {
+export default async function Repositories({
+  searchParams,
+}: {
+  searchParams: Promise<{ installation_id: string }>;
+}) {
   const { installation_id } = await searchParams;
   const octokit = await app.getInstallationOctokit(Number(installation_id));
   const { data } = await octokit.request("GET /installation/repositories", {

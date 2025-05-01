@@ -17,7 +17,7 @@ export default function Repo({
     ...theme.typography.body2,
     padding: theme.spacing(2),
     textAlign: "center",
-    color: (theme.vars ?? theme).palette.text.secondary,
+    color: theme.palette.text.secondary,
     ...theme.applyStyles("dark", {
       backgroundColor: "#1A2027",
     }),
