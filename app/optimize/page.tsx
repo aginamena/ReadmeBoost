@@ -28,10 +28,10 @@ export default function Optimze() {
   useEffect(() => {
     setIsLoading(true);
     async function optimizeReadme() {
-      const constructive_feedback: string = JSON.parse(
+      const constructive_feedback: object[] = JSON.parse(
         sessionStorage.getItem("constructive_feedback") || "" // Default to empty string if null
       );
-      const summarizedFiles: string = JSON.parse(
+      const summarizedFiles: string[] = JSON.parse(
         sessionStorage.getItem("summarizedFiles") || "" // Default to empty string if null
       );
 
@@ -50,7 +50,7 @@ export default function Optimze() {
     <Container>
       <MDEditor
         value={isLoading ? "Loading..." : value}
-        onChange={setValue}
+        onChange={(value?: string) => setValue(value || "")}
         commands={[...commands.getCommands(), commands.divider, pushChanges]}
         fullscreen
         textareaProps={{

@@ -28,7 +28,7 @@ export default async function Comparison({
         Accept: "application/vnd.github.v3.raw",
       },
     });
-    readme = content.data;
+    readme = content.data.toString();
   } catch (error: unknown) {
     if (error instanceof Error) {
       errorMessage = error.message;

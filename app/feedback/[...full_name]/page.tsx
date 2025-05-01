@@ -81,14 +81,14 @@ export default async function Feedback({
       // console.log(file.path);
 
       const enc = new Tiktoken(o200k_base);
-      const tokens = enc.encode(content.data);
+      const tokens = enc.encode(content.data.toString());
 
       if (tokens.length > tokenLimitPerFile) {
         throw new Error(
           `❌ File "${file.path}" exceeds the limit of 4000 Characters. You have the reduce your file.`
         );
       }
-      const summarizedFile = await summarizeFile(content.data);
+      const summarizedFile = await summarizeFile(content.data.toString());
       summarizedFiles.push(summarizedFile);
     }
   } catch (error) {
