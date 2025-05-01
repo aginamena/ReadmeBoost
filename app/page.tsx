@@ -21,9 +21,9 @@ export default function Home() {
         }}
       >
         <Typography>
-          One of the reasons developers don't land that dream job is, they still
-          fail to present their coding projects clearly, making it hard for
-          recruiters or interviewers to understand the value of their work.
+          One of the reasons developers do not land that dream job is, they
+          still fail to present their coding projects clearly, making it hard
+          for recruiters or interviewers to understand the value of their work.
           Without a well-crafted README or live demo, even great projects WILL
           go unnoticed!
         </Typography>
@@ -66,7 +66,7 @@ export default function Home() {
             best light and pushing it directly to GitHub
           </Typography>
           <Typography>
-            What are you waiting for? Click the "Get Started" button to turn
+            What are you waiting for? Click the `Get Started` button to turn
             your GitHub READMEs into clear, professional presentations
           </Typography>
           <Introduction />

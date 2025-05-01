@@ -19,7 +19,7 @@ export default async function Feedback({
   const repo = full_name[1];
   const octokit = await app.getInstallationOctokit(Number(installation_id));
 
-  let summarizedFiles: string[] = [];
+  const summarizedFiles: string[] = [];
   let errorMessage = null;
 
   async function summarizeFile(code: string) {

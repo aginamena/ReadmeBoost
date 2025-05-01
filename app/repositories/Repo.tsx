@@ -11,7 +11,7 @@ export default function Repo({
   fullName: string;
   installation_id: string;
 }) {
-  const [_, repoName] = fullName.split("/");
+  const repoName = fullName.split("/")[1];
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: "#fff",
     ...theme.typography.body2,
