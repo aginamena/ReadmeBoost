@@ -92,7 +92,7 @@ export default async function Feedback({
       summarizedFiles.push(summarizedFile);
     }
   } catch (error) {
-    errorMessage = error.message;
+    if (error instanceof Error) errorMessage = error.message;
   }
 
   // get the content of each file, make sure the size is <= 100MB

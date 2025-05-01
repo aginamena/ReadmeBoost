@@ -70,7 +70,7 @@ export default async function Comparison({
         Don't include any markdown symbol in your constructive feedback.`,
     });
     constructive_feedback = object.constructive_feedback;
-  } catch (error: unknown) {
+  } catch (error) {
     if (error instanceof Error) errorMessage = error.message;
   }
   console.log(errorMessage);
