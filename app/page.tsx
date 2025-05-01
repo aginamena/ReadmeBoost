@@ -1,103 +1,106 @@
+import Introduction from "./home/Introduction";
+import Benefit from "./home/Benefit";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import { Typography } from "@mui/material";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <Container className="p-12">
+      <Typography variant="h4" gutterBottom>
+        Transform your GitHub READMEs into clear, professional presentations
+      </Typography>
+      <Introduction />
+      <Box
+        sx={{
+          display: { xs: "block", md: "flex" },
+          alignItems: "center",
+          marginTop: "50px",
+          marginBottom: "50px",
+        }}
+      >
+        <Typography>
+          One of the reasons developers don't land that dream job is, they still
+          fail to present their coding projects clearly, making it hard for
+          recruiters or interviewers to understand the value of their work.
+          Without a well-crafted README or live demo, even great projects WILL
+          go unnoticed!
+        </Typography>
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src="/frustrated_developer.jpg"
+          width={300}
+          height={200}
+          alt="Frustrated developer not getting any callbacks for interviews"
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </Box>
+      <Box
+        sx={{
+          display: { xs: "block", md: "flex" },
+          alignItems: "center",
+          justifyContent: "space-between",
+          marginTop: "50px",
+          marginBottom: "50px",
+        }}
+      >
+        <Image
+          src="/mena_agina.png"
+          width={500}
+          height={200}
+          alt="mena agina"
+        />
+        <Box sx={{ width: { xs: "100%", md: "50%" } }}>
+          <Typography>
+            Hello, I’m Mena Agina, a software developer and the founder of this
+            website. Through my years as a developer, I’ve learned that it’s not
+            just about what you know, but how well you can communicate it. Many
+            of you have amazing projects in your repositories, but the problem
+            is they’re not presented well in your README, making it harder to
+            land interviews.
+          </Typography>
+          <Typography style={{ marginTop: "20px", marginBottom: "20px" }}>
+            But don’t worry—there’s a solution! Introducing <b>ReadmeBoost</b>:
+            a service that transforms your GitHub README into a professional
+            presentation that will impress recruiters. If you don’t have a
+            README yet, we’ll create one for you, showcasing your project in the
+            best light and pushing it directly to GitHub
+          </Typography>
+          <Typography>
+            What are you waiting for? Click the "Get Started" button to turn
+            your GitHub READMEs into clear, professional presentations
+          </Typography>
+          <Introduction />
+        </Box>
+      </Box>
+      <Typography
+        variant="h4"
+        style={{ textAlign: "center", marginTop: "50px", marginBottom: "50px" }}
+      >
+        What you can expect
+      </Typography>
+      <Box className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <Benefit
+          title="Clarity and Confidence"
+          body="You will no longer be guessing what to say in an interview or review about your code"
+          imgPath="/clarity_and_confidence.jpg"
+        />
+        <Benefit
+          title="A Recruiter-Ready First Impression"
+          body="Higher chances of callbacks, interviews, or portfolio reviews that actually lead somewhere"
+          imgPath="/recruiter_ready_first_impression.jpg"
+        />
+        <Benefit
+          title="A Professional README"
+          body="Something you are proud to show off on GitHub, LinkedIn, resumes, or during interviews"
+          imgPath="/professional_readme.jpg"
+        />
+        <Benefit
+          title="Reusability & Scale"
+          body=" It’s not a one-time fix — it’s a repeatable system that you can use for all of your future projects."
+          imgPath="/reusability_and_scale.jpg"
+        />
+      </Box>
+      <Introduction />
+    </Container>
   );
 }

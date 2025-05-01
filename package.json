@@ -9,19 +9,34 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ai-sdk/togetherai": "^0.2.13",
+    "@clerk/nextjs": "^6.18.1",
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^7.0.2",
+    "@mui/material-nextjs": "^7.0.2",
+    "@octokit/app": "^15.1.6",
+    "@octokit/auth-app": "^7.2.1",
+    "@octokit/oauth-app": "^7.1.6",
+    "@octokit/request": "^9.2.3",
+    "@uiw/react-md-editor": "^4.0.5",
+    "ai": "^4.3.12",
+    "js-tiktoken": "^1.0.20",
+    "next": "15.3.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.1"
+    "zod": "^3.24.3"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
