@@ -39,7 +39,7 @@ export default async function Comparison({
   //   console.log(`${process.env.TOGETHER_AI_MODEL}`);
   try {
     const { object } = await generateObject({
-      model: togetherai(`${process.env.TOGETHER_AI_MODEL}`),
+      model: togetherai("meta-llama/Llama-3.3-70B-Instruct-Turbo"),
       //   togetherai("meta-llama/Llama-3-8b-chat-hf"),
       system: `You are an expert in providing concise and actionable feedback for README files. Your task is to analyze each section of the user's README and provide clear, brief suggestions that make the README more professional, clear, and appealing to recruiters.
         Your output should be an array of objects, each containing:
@@ -56,9 +56,6 @@ export default async function Comparison({
               .string()
               .describe("The feedback to improve the readme phrase"),
           })
-        ),
-        optimizedReadme: string().describe(
-          "An optimized version of the readme"
         ),
       }),
       prompt: `Given the user's README file ${readme} and a summary of their most important files ${summarizedFiles}, provide concise feedback for each section of the README. For each section, include:

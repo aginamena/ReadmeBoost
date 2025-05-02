@@ -29,7 +29,7 @@ export default async function Feedback({
     // await timeout(1000);
 
     const { text } = await generateText({
-      model: togetherai(`${process.env.TOGETHER_AI_MODEL}`),
+      model: togetherai("meta-llama/Llama-3.3-70B-Instruct-Turbo"),
       // togetherai(" meta-llama/Llama-3-8b-chat-hf"),
       system:
         "You are very good at reading files and summarizing what it's doing",
