@@ -1,8 +1,6 @@
 import ThemeRegistry from "@/components/ThemeRegistry";
-import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "./Header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,15 +13,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body>
-          <ThemeRegistry>
-            <Header />
-            {children}
-          </ThemeRegistry>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en">
+      <body>
+        <ThemeRegistry>{children}</ThemeRegistry>
+      </body>
+    </html>
   );
 }
