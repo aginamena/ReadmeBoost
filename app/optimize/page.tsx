@@ -1,6 +1,6 @@
 "use client";
 
-import { Container, Button } from "@mui/material";
+import { Container, Box } from "@mui/material";
 import MDEditor, { commands, ICommand } from "@uiw/react-md-editor";
 import { useEffect, useState } from "react";
 import { getOptimizedReadme } from "./util";
@@ -15,9 +15,9 @@ export default function Optimze() {
     buttonProps: { "aria-label": "Push changes to github" },
     icon: (
       // should be green button not white
-      <Button variant="contained" color="success">
+      <Box style={{ border: "2px solid green", padding: "5px" }}>
         Push Changes
-      </Button>
+      </Box>
     ),
     execute: () => {
       alert("This feature is not yet available. We're working on it!");
