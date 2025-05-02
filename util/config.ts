@@ -1,18 +1,27 @@
 import { App } from "@octokit/app";
 import { createTogetherAI } from "@ai-sdk/togetherai";
 
-const server_github_app_id = process.env.GITHUB_APP_ID
-const public_github_app_id = process.env.NEXT_PUBLIC_GITHUB_APP_ID
-const server_github_private_id = process.env.GITHUB_PRIVATE_KEY
-const public_github_private_id = process.env.NEXT_PUBLIC_GITHUB_PRIVATE_KEY 
-const server_together_id = process.env.TOGETHER_AI_API_KEY 
-const public_together_id = process.env.NEXT_PUBLIC_TOGETHER_AI_API_KEY
+// const server_github_app_id = process.env.GITHUB_APP_ID
+// const public_github_app_id = process.env.NEXT_PUBLIC_GITHUB_APP_ID
+// const server_github_private_id = process.env.GITHUB_PRIVATE_KEY
+// const public_github_private_id = process.env.NEXT_PUBLIC_GITHUB_PRIVATE_KEY 
+// const server_together_id = process.env.TOGETHER_AI_API_KEY 
+// const public_together_id = process.env.NEXT_PUBLIC_TOGETHER_AI_API_KEY
 
-export const app = new App({
-    appId: server_github_app_id || public_github_app_id || "",
-    privateKey: server_github_private_id || public_github_private_id|| ""
+// export const app = new App({
+//     appId: server_github_app_id || public_github_app_id || "",
+//     privateKey: server_github_private_id || public_github_private_id|| ""
+// });
+
+// export const togetherai = createTogetherAI({
+//     apiKey: server_together_id || public_together_id 
+//   });
+
+  export const app = new App({
+    appId: "1236127",
+    privateKey: "=-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAxSKO42ZzMjZLy7TPvX54vDe82fHJXB3yBrgPN8vXfoubhmjN\n5P6kM3owr8UIG9vhHYjkYfs27UNTtDXlZYS86rktuTJOSDi4lTAHplRRplLV0oSD\nd+Op5htPk8BbpY4/mBLgsS32XPF1ZpKAOHcAunptAhpGXVuJp+Dtcx35Qwg/pBAT\nhAN2hU62Vujhiq7AN7f17IFy51zDjbyJhy8A4W5nFLfduSa0hFvL9GtZn6yVqtYT\n8DxiKcJUoPE4DUFXYDIFlb4HmSLilb6Z+PTpVjyaLoJCIjGABUGRJ89BX3SOKrws\nrJG1rtBydSJpSnBs7WLMFyJjTlZ5CIMATVtgtwIDAQABAoIBAAZGUVH/os8IV2VG\nfg5EBkfHZmVxgr1B3sBD/4gBHvzSKMMgdt1BFazlyMLvfJCWcRXlk49i1Z67s+Ba\njtCqZvD5r/DjHwbBd26YNsYejPLEVDX9LcoVHwVJ/UBwsPoWCwQmJay+D8dpkBkR\ntK8XapiE6Q9WEsNJ9Jm5WRV+8L4naLv9U7OXd7GT+dJXkS/AFc8tpwjsqBVfaIna\nt1GgW8vLBu2KaFUfi+rGmmHXqIG7RKLauVHuYPbQsqEWBooYpZvlNq5pI6MyeccH\nXnmRDvPp1Q2ELFirNsJNC6BRHT6VshfpKAqb4XsNaoQbAfdT17xDAvsAwpWV3Xmq\nDG8KAOECgYEA7gTI/jS+0WfWBJsFLcU3kNbvwY02TPDCqDiFrno6QNAwNKc3hUn3\nQs0HOnkAZluJeavGT9FGeHJrE9cXNjBEeQ6rpZZVOC/zlKi0hZw3ZnmCspQwhiGK\ntnqSCa3Iuk3fF/vOCIBfKejqE/xuB6R0a4vxLIa1MUJao9ZkF3yp4NkCgYEA1AcX\n/tyAYEMQsuwSZREm+nO/V6VIkfSzZgn0MiRQIIJK3ybk/mnM5IuTwE693juS/M9H\nNyeWkfILO6kgfwaRZjqY9UZdg4berbXrNtr06w6zZ49eg7EuV/W5WyEVTuYGSJQl\nX1qYo/UpLunp4T0z1itapPZRgsGO+Fov1UqgVA8CgYA+sUf3nRD9uynmAKb2jVG7\ndsGj63v3/BppkKm1cUBSvgNUew7mrrrP/4z92809KLMnNxV/BJJZO1n02dylS0Vd\n1X1kmhpMOGUiLOWPo7v749mHC/1T9xXARrycjAeo+sXeXVbBan6mXVD6fqzEmo6H\nnU6i+cBT/zQ8n0Wx4gYk0QKBgQDOhkpdObLiEPFHFqOkRlzNP8l1Oc3CPbQxBCkU\nXkKeJ8t+KYiMN8oYI8y7WPegbC70iYI4uxry9ezzI/4/PMqL5S/wWaXk444rbjO6\nrvQ5sYwWp5PMet1FWFg/5621uGEOeR8eDkT4D2kaBUaG2vKO/pPAcx1aW+dDCbXl\n8FbTCQKBgQDo3w09sRZuvaCt4jq6BYlvwgqOYrWSkuv2dsIK8FYsgDyugqxYgoDk\nAY1NKanSK011LEighdvuQfJweYqMAirB4EQ//mIESftmIPBmvS5rCIaEkKNY9vZH\nej4fkrxpb7bZsg0yteCdbA2IyqJXvopGLRmWKi8kpkjjSgcnXIZsyg==\n-----END RSA PRIVATE KEY-----"
 });
 
 export const togetherai = createTogetherAI({
-    apiKey: server_together_id || public_together_id 
+    apiKey: "e97a3d73a4c3cc37053367f2537ed77a1fe25e3923526a42417b15de08002620"
   });
