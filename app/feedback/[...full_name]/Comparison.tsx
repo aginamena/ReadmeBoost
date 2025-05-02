@@ -1,6 +1,6 @@
 import { app, togetherai } from "@/util/config";
 import { generateObject } from "ai";
-import { string, z } from "zod";
+import { z } from "zod";
 import TableCmp from "./TableCmp";
 
 export default async function Comparison({
